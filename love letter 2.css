@@ -296,6 +296,19 @@ body {
   }
 }
 
+/* Aumenta envelope e botão em telas pequenas (celular) */
+@media (max-width: 900px) {
+  .envelope {
+    width: 100vw;
+    height: 90vw;
+    /* ajuste conforme necessário */
+  }
+  .botao {
+    font-size: 2em;
+    padding: 20px 40px;
+  }
+}
+
 .container-central {
   min-height: 100vh;
   display: flex;
