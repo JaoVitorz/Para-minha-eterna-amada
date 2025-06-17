@@ -12,10 +12,21 @@
     <link rel="stylesheet" href="love letter 2.css" />
   </head>
   <body>
-    <audio autoplay loop>
-      <source src="It's Been a Long, Long Time.mp3" type="audio/mpeg" />
-      Seu navegador não suporta áudio HTML5.
-    </audio>
+    <audio id="meuAudio" src="/It's Been a Long, Long Time.mp3" autoplay muted></audio>
+    <script>
+      window.addEventListener("DOMContentLoaded", function () {
+        const audio = document.getElementById("meuAudio");
+        // Remove mute após interação do usuário
+        document.body.addEventListener(
+          "click",
+          function () {
+            audio.muted = false;
+            audio.play();
+          },
+          { once: true }
+        );
+      });
+    </script>
 
     <div class="container-central">
       <div class="envlope-wrapper">
@@ -30,16 +41,18 @@
                 Você é tão linda, que toda vez que eu te vejo, meu mundo para,
               </div>
               <div class="words line4">
-                e tudo faz sentido. Obrigado por existir e iluminar meus dias, obrigado por toda paciência
-                 e carinho que você tem comigo, por me fazer rir e me fazer sentir amado, estou melhorando sempre
-                 a cada dia, sendo uma melhor versão de mim mesmo para se tornar o Homem que vai dar conta de tudo 
-                 em nossa casa com nossos futuros filhos, que sempre vai dizer "eu dou um jeito, eu consigo, eu arrumo"
-                 e que também vai comer de tudo que você fizer, mesmo que em minha adolescência eu não gostasse,
-                 porque o importante é que foi você quem fez, com todo o amor e carinho do mundo,
-                 e eu amo tudo que você faz. Obrigado por tudo. Para a mulher mais linda e maravilhosa desse mundo,
-                 tu és perfeita princesa, e eu sou o homem mais sortudo do mundo por ter você.
-              
-                Eu Te amo!
+                e tudo faz sentido. Obrigado por existir e iluminar meus dias,
+                obrigado por toda paciência e carinho que você tem comigo, por
+                me fazer rir e me fazer sentir amado, estou melhorando sempre a
+                cada dia, sendo uma melhor versão de mim mesmo para se tornar o
+                Homem que vai dar conta de tudo em nossa casa com nossos futuros
+                filhos, que sempre vai dizer "eu dou um jeito, eu consigo, eu
+                arrumo" e que também vai comer de tudo que você fizer, mesmo que
+                em minha adolescência eu não gostasse, porque o importante é que
+                foi você quem fez, com todo o amor e carinho do mundo, e eu amo
+                tudo que você faz. Obrigado por tudo. Para a mulher mais linda e
+                maravilhosa desse mundo, tu és perfeita princesa, e eu sou o
+                homem mais sortudo do mundo por ter você. Eu Te amo!
               </div>
             </div>
           </div>

@@ -299,8 +299,8 @@ body {
 /* Aumenta envelope e botão em telas pequenas (celular) */
 @media (max-width: 900px) {
   .envelope {
-    width: 100vw;
-    height: 90vw;
+    width: 90vw;
+    height: 60vw;
     /* ajuste conforme necessário */
   }
   .botao {

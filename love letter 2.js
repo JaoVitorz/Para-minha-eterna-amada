@@ -32,3 +32,13 @@ $(document).ready(function () {
     envelope.focus();
   }
 });
+
+document.getElementById("open").addEventListener("click", () => {
+  document.getElementById("envelope").classList.remove("close");
+  document.getElementById("envelope").classList.add("open");
+});
+
+document.getElementById("reset").addEventListener("click", () => {
+  document.getElementById("envelope").classList.remove("open");
+  document.getElementById("envelope").classList.add("close");
+});
