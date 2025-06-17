@@ -42,3 +42,29 @@ document.getElementById("reset").addEventListener("click", () => {
   document.getElementById("envelope").classList.remove("open");
   document.getElementById("envelope").classList.add("close");
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+  const envelope = document.getElementById("envelope");
+  const openBtn = document.getElementById("open");
+  const resetBtn = document.getElementById("reset");
+  const audio = document.getElementById("meuAudio");
+
+  openBtn.addEventListener("click", () => {
+    envelope.classList.remove("close");
+    envelope.classList.add("open");
+
+    // Autoplay com desbloqueio por clique
+    audio.muted = false;
+    audio.play().catch((e) => {
+      console.log("Autoplay bloqueado. Interação adicional necessária.", e);
+    });
+  });
+
+  resetBtn.addEventListener("click", () => {
+    envelope.classList.remove("open");
+    envelope.classList.add("close");
+    audio.pause();
+    audio.currentTime = 0;
+  });
+});
+
